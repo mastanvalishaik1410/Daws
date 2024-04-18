@@ -11,7 +11,6 @@ then
 	exit 1
 else
 	echo"$2 is sucees"
-
 }
 if [ $USERID -ne 0 ]
 then
