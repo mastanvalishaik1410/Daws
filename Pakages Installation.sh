@@ -33,5 +33,7 @@ do
 if [ $? -eq 0 ]
 then
 	echo "$i already installed ...Skipping"
+else
+	echo "$i not installed...need to install"
 fi
 done
