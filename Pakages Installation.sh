@@ -14,10 +14,10 @@ VALIDATE(){
 
 if [ $1 -ne 0 ]
 then
-	echo"$2 is fail"
+	echo -e " $R $2 is fail $N"
 	exit 1
 else
-	echo "$2 is success"
+	echo -e " $G $2 is success $N"
 fi
 }
 
@@ -38,6 +38,6 @@ if [ $? -eq 0 ]
 then
 	echo -e "$i already installed ... $Y Skipping ..$N"
 else
-	echo "$i not installed...need to install"
+	dnf install $i -y &>>LOGFILE
 fi
 done
